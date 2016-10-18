@@ -27,8 +27,7 @@
           <option value="price">Price</option>
           <option value="color">Color</option>
       </select><br /><br>
-      <div class="list-group-item" ng-repeat="candy in CC.candies | orderBy:candyOrder | filter:filterSearch" ng-style="{'background-color': candy.color}">
-        {{candy.name | uppercase }} - {{candy.price | currency}} - Color: {{candy.color}} - Fruity: {{candy.fruity | checkmark}}
+      <div class="list-group-item" ng-repeat="candy in CC.candies | orderBy:candyOrder | filter:filterSearch" ng-style="{'background-color': candy.color}"><strong>{{candy.name | uppercase }} - {{candy.price | currency}} - Color: {{candy.color}} - Fruity: {{candy.fruity | checkmark}}</strong>
       </div>
       <!-- [orderBy:'-name'], [orderBy:'name':true] :two ways to order by descending-->
 		</div>
