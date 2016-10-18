@@ -1,4 +1,5 @@
 angular.module('candyShop')
+//startoff with candycontroller
     .controller('CandyController', CandyController)
 
     function CandyController() {
