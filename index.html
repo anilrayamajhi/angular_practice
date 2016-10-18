@@ -8,6 +8,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
   <script src="app.js"></script>
   <script src="candyCtrl.js"></script>
+  <script src="candyDir.js"></script>
+  <script src="candyCostumFilter.js"></script>
   <style media="screen">
     .cy {
       background-color: pink;
@@ -18,15 +20,10 @@
 	<div class="container" ng-controller="CandyController as CC">
 		<div class="row">
 			<h1>Candies!</h1>
-      <input type="text" class="form-control" name="name" placeholder="Search" ng-model="filterSearch">
-      <br />
 
-      Sort By:
-      <select class="form-control" ng-init="candyOrder='name'" ng-model="candyOrder">
-          <option value="name">Name</option>
-          <option value="price">Price</option>
-          <option value="color">Color</option>
-      </select><br /><br>
+      <candy-filters></candy-filters>
+
+      <br /><br>
 
       <candy-list></candy-list>
       <!-- <span candy-list></span> : if need to access by attribute-->
