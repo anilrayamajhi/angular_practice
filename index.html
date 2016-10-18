@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="candyShop">
+<head>
+	<title>Angular Filters</title>
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- ANGULAR -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="candyCtrl.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="CandyController as CC">
+		<div class="row">
+			<h1>Candies!</h1>
+      <input type="text" class="form-control" name="name" placeholder="Search by Key" ng-model="filterSearch">
+      <br />
+
+      Sort By:
+      <select class="form-control" ng-init="candyOrder='name'" ng-model="candyOrder">
+          <option value="name">Name</option>
+          <option value="price">Price</option>
+          <option value="color">Color</option>
+      </select><br /><br>
+      <div class="list-group-item" ng-repeat="candy in CC.candies | orderBy:candyOrder | filter:filterSearch">
+        {{candy.name | uppercase }} - {{candy.price | currency}} - Color: {{candy.color}}
+      </div>
+      <!-- [orderBy:'-name'], [orderBy:'name':true] :two ways to order by descending-->
+		</div>
+	</div>
+</body>
+</html>
