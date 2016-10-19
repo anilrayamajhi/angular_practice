@@ -1,9 +1,14 @@
-<input type="text" class="form-control" name="name" placeholder="Search" ng-model="filterSearch">
-<br />
-
-Sort By:
-<select class="form-control" ng-init="candyOrder='name'" ng-model="candyOrder">
-    <option value="name">Name</option>
-    <option value="price">Price</option>
-    <option value="color">Color</option>
-</select>
+<div class="row">
+  <div class="col-md-4">
+    <br />
+    <input type="text" class="form-control" name="name" placeholder="Search" ng-model="filterSearch">
+  </div>
+  <div class="col-md-4">
+    Sort By:
+    <select class="form-control" ng-init="candyOrder='name'" ng-model="candyOrder">
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+        <option value="color">Color</option>
+    </select>
+  </div>
+</div>

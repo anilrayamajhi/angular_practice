@@ -11,9 +11,17 @@ angular.module('candyShop')
       method: 'GET',
       url: 'data.json'
     }).success(function(data){
-      console.log(data);
+      // console.log(data);
       return vm.candies = data;
     })
+
+    // $http({
+    //   method: 'POST',
+    //   url: 'data.json'
+    // }).success(function(data){
+    //   // console.log(data);
+    //   return vm.candies = data;
+    // })
 
 }
 })()
