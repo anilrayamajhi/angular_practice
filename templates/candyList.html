@@ -1,4 +1,4 @@
-<div class="list-group-item" ng-repeat="candy in CC.candies | orderBy:candyOrder | filter:filterSearch" ng-style="{'background-color': candy.color}"><strong>{{candy.name | uppercase }} - {{candy.price | currency}} - Color: {{candy.color}} - Fruity: {{candy.fruity | checkmark}}</strong>
+<div class="list-group-item" ng-repeat="candy in CC.candies | orderBy:candyOrder | filter:filterSearch" ng-style="{'background-color': candy.color}"><strong>{{candy.fruity | checkmark}}&emsp;&emsp;{{candy.name | uppercase }} <span style="float:right">{{candy.price | currency}}</span></strong>
 </div>
 <!-- [orderBy:'-name'], [orderBy:'name':true] :two ways to order by descending-->
 <!-- ng-if; show which ever satisfy the condition "candy.price > 0.5"-->
