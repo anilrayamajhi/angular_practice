@@ -1,3 +1,5 @@
+(function(){
+  'use strict';
 angular.module('candyShop')
   .directive('candyList', candyList)
   .directive('candyFilters', candyFilters)
@@ -19,3 +21,4 @@ function candyFilters(){
 }
 return directive
 }
+})()

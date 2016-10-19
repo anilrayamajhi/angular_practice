@@ -1,3 +1,5 @@
+(function(){
+  'use strict';
 angular.module('candyShop')
 //costum made filter initialization
   .filter('checkmark', checkmark)
@@ -9,3 +11,4 @@ function checkmark(){
     return input ? '\u2713':'\u2718'
   }
 }
+})()
